@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank You for 15 Years with WAHS</title>
+    <meta
+      name="description"
+      content="A message of gratitude from the World Association for Hallyu Studies to researchers, scholars, students, media practitioners, and the wider Hallyu studies community."
+    />
+    <link rel="icon" href="./wahs-logo.png" />
+    <style>
+      :root {
+        --ink: #122236;
+        --muted: #5e6b73;
+        --paper: #f8f5ec;
+        --paper-deep: #ebe3d2;
+        --navy: #15335a;
+        --green: #2f6f5e;
+        --gold: #b98a3d;
+        --line: rgba(18, 34, 54, 0.16);
+        --white: #fffdf8;
+        --shadow: 0 24px 70px rgba(18, 34, 54, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--paper);
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        background:
+          linear-gradient(90deg, rgba(21, 51, 90, 0.05) 1px, transparent 1px),
+          linear-gradient(rgba(21, 51, 90, 0.045) 1px, transparent 1px),
+          linear-gradient(135deg, #fcfaf4 0%, #f3eddf 52%, #e7dfcf 100%);
+        background-size: 48px 48px, 48px 48px, auto;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        content: "";
+        background:
+          linear-gradient(115deg, rgba(21, 51, 90, 0.94), rgba(21, 51, 90, 0.72) 38%, rgba(47, 111, 94, 0.34) 100%),
+          url("./wahs-logo.png") center 20% / min(640px, 82vw) no-repeat;
+        opacity: 0.09;
+        pointer-events: none;
+      }
+
+      body::after {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        content: "";
+        background:
+          linear-gradient(180deg, rgba(255, 253, 248, 0.8), rgba(248, 245, 236, 0.96)),
+          repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 78px,
+            rgba(185, 138, 61, 0.08) 79px,
+            transparent 80px
+          );
+        pointer-events: none;
+      }
+
+      .page {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        padding: clamp(28px, 5vw, 72px) 18px;
+      }
+
+      .announcement {
+        width: min(980px, 100%);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 248, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .top-rule {
+        height: 8px;
+        background: linear-gradient(90deg, var(--navy), var(--green), var(--gold));
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: clamp(26px, 5vw, 58px);
+        align-items: center;
+        padding: clamp(34px, 6vw, 72px);
+      }
+
+      .brand {
+        display: grid;
+        gap: 18px;
+        justify-items: center;
+        align-self: stretch;
+        padding-right: clamp(18px, 3vw, 36px);
+        border-right: 1px solid var(--line);
+      }
+
+      .logo-wrap {
+        display: grid;
+        width: min(168px, 48vw);
+        aspect-ratio: 1;
+        place-items: center;
+        border: 1px solid rgba(21, 51, 90, 0.18);
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 16px 36px rgba(21, 51, 90, 0.12);
+      }
+
+      .logo {
+        display: block;
+        width: 78%;
+        height: auto;
+        max-height: 78%;
+        object-fit: contain;
+      }
+
+      .anniversary {
+        color: var(--green);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .message {
+        min-width: 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 18px;
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        display: block;
+        width: 42px;
+        height: 2px;
+        content: "";
+        background: currentColor;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 0;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.35rem, 7vw, 5.4rem);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 0.98;
+      }
+
+      .lede {
+        max-width: 680px;
+        margin: clamp(22px, 4vw, 34px) 0 0;
+        color: #263a4d;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.14rem, 2.3vw, 1.48rem);
+        line-height: 1.72;
+      }
+
+      .copy {
+        display: grid;
+        max-width: 690px;
+        gap: 18px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.9vw, 1.08rem);
+        line-height: 1.86;
+      }
+
+      .copy p {
+        margin: 0;
+      }
+
+      .closing {
+        margin-top: clamp(26px, 4vw, 38px);
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.18rem, 2.4vw, 1.45rem);
+        font-weight: 700;
+        line-height: 1.55;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px clamp(24px, 6vw, 72px);
+        border-top: 1px solid var(--line);
+        background: rgba(248, 245, 236, 0.78);
+        color: #607079;
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+
+      .site {
+        color: var(--navy);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mark {
+        color: var(--green);
+        font-weight: 700;
+      }
+
+      @media (max-width: 760px) {
+        .page {
+          align-items: start;
+        }
+
+        .content {
+          grid-template-columns: 1fr;
+          padding: clamp(30px, 8vw, 44px);
+        }
+
+        .brand {
+          align-self: auto;
+          justify-items: start;
+          padding: 0 0 24px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .logo-wrap {
+          width: 118px;
+        }
+
+        .anniversary {
+          text-align: left;
+        }
+
+        .eyebrow::before {
+          width: 28px;
+        }
+
+        footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 430px) {
+        .page {
+          padding-inline: 12px;
+        }
+
+        .announcement {
+          border-radius: 6px;
+        }
+
+        h1 {
+          font-size: clamp(2.1rem, 14vw, 3.25rem);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="announcement" aria-labelledby="page-title">
+        <div class="top-rule" aria-hidden="true"></div>
+        <div class="content">
+          <aside class="brand" aria-label="WAHS">
+            <div class="logo-wrap">
+              <img class="logo" src="./wahs-logo.png" alt="WAHS logo" />
+            </div>
+            <div class="anniversary">15 Years of Hallyu Studies</div>
+          </aside>
+
+          <div class="message">
+            <p class="eyebrow">World Association for Hallyu Studies</p>
+            <h1 id="page-title">Thank You for 15 Years with WAHS</h1>
+            <p class="lede">
+              For fifteen years, iwahs.org has had the privilege of supporting
+              WAHS as a trusted home for Hallyu research, scholarly exchange,
+              and global conversation on Korean popular culture.
+            </p>
+
+            <div class="copy">
+              <p>
+                We are deeply grateful to the researchers, scholars, students,
+                educators, media practitioners, branch partners, and community
+                members who have been part of this journey. Your continued
+                support has helped shape the World Association for Hallyu
+                Studies into the global academic community it is today.
+              </p>
+              <p>
+                As we look toward the future, our commitment remains unchanged:
+                to bridge rigorous multidisciplinary research with practical
+                insight into the Korean Wave and its international cultural
+                impact.
+              </p>
+            </div>
+
+            <p class="closing">
+              WAHS is still here, and we look forward to welcoming you again
+              soon.
+            </p>
+          </div>
+        </div>
+        <footer>
+          <span><a class="site" href="https://iwahs.org">iwahs.org</a></span>
+          <span><span class="mark">Advancing Hallyu studies through research, dialogue, and global exchange.</span></span>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
